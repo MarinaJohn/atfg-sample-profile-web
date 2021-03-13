@@ -1,9 +1,33 @@
 <!DOCTYPE html>
-<html>
 <head>
-    <title>Aaronchettan-api</title>
+    <title>Student profile</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1" charset="utf-8"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="styl.css" media="screen, handheld" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
+
 <body>
-    <h1>Success!!</h1>
+    <div class="box">
+        <img src="profile.jpg" alt="" class="box-img">
+        <h1 class="h1"></h1>
+        <h5 class="h5"></h5>
+        <p class="p"></p>
+        <script>
+        var queryString =  window.location.search.slice(1);
+        $.getJSON('https://api.atfg.gtechindia.org/profile/'+queryString, function(data,status) {
+            console.log(data.college)
+            var text=``
+            text = text + `Student Name: ${data.studentName}<br>College: ${data.college}<br>Rank  : ${data.karma}`
+
+            $(".h1").html(data.studentName);
+            $(".h5").html(`College: ${data.college}`);
+            $(".p").html(`Rank  : ${data.karma}`);
+        });
+        
+        </script>
+    </div>
 </body>
 </html>
+
