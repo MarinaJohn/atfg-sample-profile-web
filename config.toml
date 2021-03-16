@@ -1,4 +1,4 @@
 baseURL = "https://atfg-tj3n.onrender.com"
 languageCode = "en-us"
 title = "My New Hugo Site"
-theme = "git@github.com:vaga/hugo-theme-m10c.git"
+theme = "m10c"
