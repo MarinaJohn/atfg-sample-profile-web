@@ -1,4 +1,4 @@
-baseURL = "http://example.org/"
+baseURL = "https://atfg-tj3n.onrender.com/"
 languageCode = "en-us"
 title = "My New Hugo Site"
 theme = "m10c"
