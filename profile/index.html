@@ -15,7 +15,7 @@
         <h5 class="h5"></h5>
         <p class="p"></p>
         <script>
-        var queryString =  window.location.search.slice(1);
+        var queryString =  window.location.search.slice(1,-1);
         $.getJSON('https://api.atfg.gtechindia.org/profile/'+queryString, function(data,status) {
             console.log(data.college)
             var text=``
